@@ -4,7 +4,6 @@ import UserDetail from "../../components/userDetail/UserDetail";
 import { useNavigate } from "react-router-dom";
 import "./profile.scss";
 import { Container } from "reactstrap";
-import { FaArrowLeft } from "react-icons/fa";
 import { DateTime } from "luxon";
 
 const Profile = () => {
@@ -106,7 +105,7 @@ const toggleClock = () => {
         <div className="header">
           <div>
             <span onClick={() => navigate(-1)}>
-              <FaArrowLeft className="backIcon" />
+
               <button className="btn">Back</button>
             </span>
           </div>
