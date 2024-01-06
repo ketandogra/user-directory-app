@@ -25,19 +25,13 @@ const Profile = () => {
   }
   
 
- // Fetch countries data from the API
-useEffect(() => {
-  fetch("http://worldtimeapi.org/api/timezone")
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-      return response.json();
-    })
-    .then((data) => setCountries(data))
-    .catch((error) => console.error("Error fetching countries:", error));
-}, []);
-
+  // Fetch countries data from the API
+  useEffect(() => {
+    axios
+      .get("https://worldtimeapi.org/api/timezone")
+      .then((response) => setCountries(response.data))
+      .catch((error) => console.error("Error fetching countries:", error));
+  }, []);
 
 // Fetch current time for the selected country
 useEffect(() => {
@@ -45,7 +39,7 @@ useEffect(() => {
   const fetchCurrentTime = () => {
     if (selectedCountry && clockRunning) {
       const [area, location, region] = selectedCountry.split("/");
-      const apiUrl = `http://worldtimeapi.org/api/timezone/${area}/${location}${
+      const apiUrl = `https://worldtimeapi.org/api/timezone/${area}/${location}${
         region ? "/" + region : ""
       }`;
 
