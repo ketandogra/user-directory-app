@@ -1,0 +1,48 @@
+.profileWrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+    .header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .backIcon{
+            cursor: pointer;
+        }
+        .btn{
+            border: none;
+            color: white;
+
+        }
+        .action{
+            background-color: red;
+            border: 5px;
+            padding: 0 5px;
+            margin-left: 10px;
+        }
+        & > div:nth-child(even) {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+          }
+          
+        #countryDropdown{
+            width: 200px;
+            background-color: transparent;
+            color: white;
+            option{
+                width: 200px;
+                background-color: var(--card-color)
+            }
+        }
+    }
+    .pageTitle{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+
+
+

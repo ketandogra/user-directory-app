@@ -1,0 +1,26 @@
+.directoryWrapper {
+  width: 100%;
+  height: 100vh;
+  ul {
+    div {
+      padding: 10px;
+      background-color: var(--card-color);
+      border-radius: 5px;
+      margin: 20px;
+      cursor: pointer;
+      box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+        rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+      li {
+        display: flex;
+        justify-content: space-between;
+        span {
+          font-weight: 600;
+        }
+      }
+    }
+    div:hover {
+      background-color: white;
+      color: var(--main-text-color);
+    }
+  }
+}
